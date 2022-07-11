@@ -16,9 +16,28 @@ function App() {
   const currentScore = cards.filter((card) => card.clicked).length;
 
   const handleCardClick = (id: number) => {
+    const clickedCard = cards.find((card) => card.id === id);
+
+    // If card is clicked GAME OVER and time to reset
+    if (clickedCard?.clicked) {
+      setCards([
+        { id: 0, name: "first", clicked: false },
+        { id: 1, name: "second", clicked: false },
+        { id: 2, name: "third", clicked: false },
+        { id: 3, name: "fourth", clicked: false },
+        { id: 4, name: "fifth", clicked: false },
+      ]);
+      return;
+    }
+
+    // This toggles card with the given id to true
     const newCards = cards.map((card) =>
       card.id === id ? { ...card, clicked: true } : card
     );
+
+    // This shuffles the array
+    newCards.sort(() => Math.random() - 0.5);
+
     setCards(newCards);
   };
 
