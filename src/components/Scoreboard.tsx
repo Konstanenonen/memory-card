@@ -8,8 +8,9 @@ interface ScoreboardProps {
 function Scoreboard({ score, total }: ScoreboardProps) {
   return (
     <div>
-      <p>{score}</p>
-      <p>{total}</p>
+      <p>
+        Current score: {score} / {total}
+      </p>
     </div>
   );
 }
