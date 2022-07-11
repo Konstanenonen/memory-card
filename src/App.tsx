@@ -32,7 +32,7 @@ function App() {
 
     // This toggles card with the given id to true
     const newCards = cards.map((card) =>
-      card.id === id ? { ...card, clicked: true } : card
+      card.id === id ? { ...card, clicked: true } : { ...card }
     );
 
     // This shuffles the array
