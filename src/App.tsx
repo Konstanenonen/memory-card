@@ -1,22 +1,6 @@
-/* eslint-disable no-unused-vars */
 import React, { useState } from "react";
-import styled from "styled-components";
 import Card from "./components/Card";
 import Scoreboard from "./components/Scoreboard";
-
-const AppContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 50px;
-`;
-
-const Grid = styled.div`
-  display: grid;
-  grid-template-columns: 125px 125px 125px;
-  grid-template-rows: 200px 200px;
-  gap: 10px;
-`;
 
 function App() {
   const [cards, setCards] = useState([
@@ -59,15 +43,15 @@ function App() {
   };
 
   return (
-    <AppContainer>
+    <div>
       <h1>Memory Card Game</h1>
       <Scoreboard score={currentScore} total={total} />
-      <Grid>
+      <div>
         {cards.map(({ id }) => (
           <Card key={id} id={id} handleClick={() => handleCardClick(id)} />
         ))}
-      </Grid>
-    </AppContainer>
+      </div>
+    </div>
   );
 }
 

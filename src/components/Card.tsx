@@ -1,6 +1,6 @@
-/* eslint-disable no-unused-vars */
+/* eslint-disable jsx-a11y/click-events-have-key-events */
+/* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
 import React from "react";
-import styled from "styled-components";
 import dog1 from "../images/pexels-anna-shvets-4588047.jpg";
 import dog2 from "../images/pexels-gillian-harrison-4668425.jpg";
 import dog3 from "../images/pexels-kasuma-933498.jpg";
@@ -12,14 +12,6 @@ interface CardProps {
   id: number;
   handleClick: () => void;
 }
-
-const Container = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  border: 1px solid black;
-`;
 
 function Card({ id, handleClick }: CardProps) {
   const pictureSrc = () => {
@@ -42,9 +34,15 @@ function Card({ id, handleClick }: CardProps) {
   };
 
   return (
-    <Container onClick={handleClick}>
-      <img width={125} height={200} src={pictureSrc()} alt="Dog" />
-    </Container>
+    <div>
+      <img
+        onClick={handleClick}
+        width={125}
+        height={200}
+        src={pictureSrc()}
+        alt="Dog"
+      />
+    </div>
   );
 }
 
