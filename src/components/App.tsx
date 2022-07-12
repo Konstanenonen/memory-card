@@ -11,6 +11,8 @@ function App() {
     { id: 3, clicked: false },
     { id: 4, clicked: false },
     { id: 5, clicked: false },
+    { id: 6, clicked: false },
+    { id: 7, clicked: false },
   ]);
 
   const total = cards.length;
@@ -28,6 +30,8 @@ function App() {
         { id: 3, clicked: false },
         { id: 4, clicked: false },
         { id: 5, clicked: false },
+        { id: 6, clicked: false },
+        { id: 7, clicked: false },
       ]);
       return;
     }
@@ -49,7 +53,7 @@ function App() {
         <h1 className="text-3xl text-white">Memory Card Game</h1>
         <Scoreboard score={currentScore} total={total} />
       </NavBar>
-      <div className="p-5 flex flex-row flex-wrap gap-6 place-items-center">
+      <div className="p-10 flex flex-row flex-wrap gap-8 max-w-screen-xl justify-center">
         {cards.map(({ id }) => (
           <Card key={id} id={id} handleClick={() => handleCardClick(id)} />
         ))}

@@ -13,7 +13,7 @@ function Scoreboard({ score, total }: ScoreboardProps) {
   }, [score]);
 
   return (
-    <div className="flex flex-col gap-3 text-xl">
+    <div className="flex flex-col gap-5 text-xl">
       <p className="text-white">
         Current score: {score} / {total}
       </p>

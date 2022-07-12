@@ -7,6 +7,8 @@ import dog3 from "../images/pexels-kasuma-933498.jpg";
 import dog4 from "../images/pexels-lucas-andrade-4681107.jpg";
 import dog5 from "../images/pexels-miguel-constantin-montes-2623968.jpg";
 import dog6 from "../images/pexels-valeria-boltneva-1805164.jpg";
+import dog7 from "../images/pexels-orlando-allo-3658120.jpg";
+import dog8 from "../images/pexels-anna-shvets-4588052.jpg";
 
 interface CardProps {
   id: number;
@@ -28,17 +30,21 @@ function Card({ id, handleClick }: CardProps) {
         return dog5;
       case 5:
         return dog6;
+      case 6:
+        return dog7;
+      case 7:
+        return dog8;
       default:
         return dog1;
     }
   };
 
   return (
-    <div className="shadow-md cursor-pointer">
+    <div className="p-2 shadow-md shadow-blue-500/50 cursor-pointer border-blue-500 rounded-md">
       <img
         onClick={handleClick}
-        width={125}
-        height={200}
+        width={150}
+        height={250}
         src={pictureSrc()}
         alt="Dog"
       />
