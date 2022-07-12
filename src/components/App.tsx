@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Card from "./Card";
+import NavBar from "./NavBar";
 import Scoreboard from "./Scoreboard";
 
 function App() {
@@ -43,10 +44,12 @@ function App() {
   };
 
   return (
-    <div>
-      <h1>Memory Card Game</h1>
-      <Scoreboard score={currentScore} total={total} />
-      <div>
+    <div className="flex flex-col place-items-center">
+      <NavBar>
+        <h1 className="text-3xl text-white">Memory Card Game</h1>
+        <Scoreboard score={currentScore} total={total} />
+      </NavBar>
+      <div className="p-5 flex flex-row flex-wrap gap-6 place-items-center">
         {cards.map(({ id }) => (
           <Card key={id} id={id} handleClick={() => handleCardClick(id)} />
         ))}

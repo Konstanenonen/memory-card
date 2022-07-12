@@ -34,7 +34,7 @@ function Card({ id, handleClick }: CardProps) {
   };
 
   return (
-    <div>
+    <div className="shadow-md cursor-pointer">
       <img
         onClick={handleClick}
         width={125}
