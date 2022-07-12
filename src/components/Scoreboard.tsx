@@ -1,3 +1,4 @@
+/* eslint-disable no-nested-ternary */
 import React, { useEffect, useState } from "react";
 
 interface ScoreboardProps {
@@ -14,7 +15,15 @@ function Scoreboard({ score, total }: ScoreboardProps) {
 
   return (
     <div className="flex flex-col gap-5 text-xl">
-      <p className="text-white">
+      <p
+        className={
+          score < 6
+            ? "text-white"
+            : score < 9
+            ? "text-yellow-300"
+            : "text-red-300"
+        }
+      >
         Current score: {score} / {total}
       </p>
       <p className="text-white">High Score: {highScore}</p>
