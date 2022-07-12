@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import Card from "./components/Card";
-import Scoreboard from "./components/Scoreboard";
+import Card from "./Card";
+import Scoreboard from "./Scoreboard";
 
 function App() {
   const [cards, setCards] = useState([
