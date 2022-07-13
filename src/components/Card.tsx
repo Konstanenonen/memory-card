@@ -20,35 +20,23 @@ interface CardProps {
 }
 
 function Card({ id, handleClick }: CardProps) {
-  const pictureSrc = () => {
-    switch (id) {
-      case 0:
-        return dog1;
-      case 1:
-        return dog2;
-      case 2:
-        return dog3;
-      case 3:
-        return dog4;
-      case 4:
-        return dog5;
-      case 5:
-        return dog6;
-      case 6:
-        return dog7;
-      case 7:
-        return dog8;
-      case 8:
-        return dog9;
-      case 9:
-        return dog10;
-      case 10:
-        return dog11;
-      case 11:
-        return dog12;
-      default:
-        return dog1;
-    }
+  const pictureSrc = (): string => {
+    const dogs = [
+      dog1,
+      dog2,
+      dog3,
+      dog4,
+      dog5,
+      dog6,
+      dog7,
+      dog8,
+      dog9,
+      dog10,
+      dog11,
+      dog12,
+    ];
+
+    return dogs[id];
   };
 
   return (
