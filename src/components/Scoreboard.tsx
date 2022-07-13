@@ -1,4 +1,3 @@
-/* eslint-disable no-nested-ternary */
 import React, { useEffect, useState } from "react";
 
 interface ScoreboardProps {
@@ -9,21 +8,19 @@ interface ScoreboardProps {
 function Scoreboard({ score, total }: ScoreboardProps) {
   const [highScore, setHighScore] = useState(score);
 
+  const defineScoreColor = () => {
+    if (score > 8) return "text-red-300";
+    if (score > 5) return "text-yellow-300";
+    return "text-white";
+  };
+
   useEffect(() => {
     if (score > highScore) setHighScore(score);
   }, [score]);
 
   return (
     <div className="flex flex-col gap-5 text-xl">
-      <p
-        className={
-          score < 6
-            ? "text-white"
-            : score < 9
-            ? "text-yellow-300"
-            : "text-red-300"
-        }
-      >
+      <p className={defineScoreColor()}>
         Current score: {score} / {total}
       </p>
       <p className="text-white">High Score: {highScore}</p>
