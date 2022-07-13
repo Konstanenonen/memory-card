@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/react-gh-pages/static/css/main.d10269dd.css",
-    "main.js": "/react-gh-pages/static/js/main.931cd2e8.js",
-    "static/media/pexels-pixabay-220938.jpg": "/react-gh-pages/static/media/pexels-pixabay-220938.af48104b8cdf15671897.jpg",
-    "static/media/pexels-valeria-boltneva-1805164.jpg": "/react-gh-pages/static/media/pexels-valeria-boltneva-1805164.634b47f72ecf2901f3ab.jpg",
-    "static/media/pexels-karolina-grabowska-4197483.jpg": "/react-gh-pages/static/media/pexels-karolina-grabowska-4197483.2a1422f71de1751c5b6e.jpg",
-    "index.html": "/react-gh-pages/index.html",
-    "main.d10269dd.css.map": "/react-gh-pages/static/css/main.d10269dd.css.map",
-    "main.931cd2e8.js.map": "/react-gh-pages/static/js/main.931cd2e8.js.map"
+    "main.css": "/memory-card/static/css/main.d10269dd.css",
+    "main.js": "/memory-card/static/js/main.cf6f5475.js",
+    "static/media/pexels-pixabay-220938.jpg": "/memory-card/static/media/pexels-pixabay-220938.af48104b8cdf15671897.jpg",
+    "static/media/pexels-valeria-boltneva-1805164.jpg": "/memory-card/static/media/pexels-valeria-boltneva-1805164.634b47f72ecf2901f3ab.jpg",
+    "static/media/pexels-karolina-grabowska-4197483.jpg": "/memory-card/static/media/pexels-karolina-grabowska-4197483.2a1422f71de1751c5b6e.jpg",
+    "index.html": "/memory-card/index.html",
+    "main.d10269dd.css.map": "/memory-card/static/css/main.d10269dd.css.map",
+    "main.cf6f5475.js.map": "/memory-card/static/js/main.cf6f5475.js.map"
   },
   "entrypoints": [
     "static/css/main.d10269dd.css",
-    "static/js/main.931cd2e8.js"
+    "static/js/main.cf6f5475.js"
   ]
 }
