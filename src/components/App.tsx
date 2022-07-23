@@ -6,6 +6,7 @@ import cardArray from "../cardArray";
 
 function App() {
   const [cards, setCards] = useState(cardArray);
+  const [cardOrder, setCardOrder] = useState<number[]>([]);
   const total = cards.length;
   const currentScore = cards.filter((card) => card.clicked).length;
 
@@ -23,6 +24,12 @@ function App() {
       return;
     }
 
+    // If card is clicked in wrong order GAME OVER
+    if (id !== cardOrder[currentScore]) {
+      setCards(cardArray);
+      return;
+    }
+
     // This toggles card with the given id to true
     const newCards = cards.map((card) =>
       card.id === id ? { ...card, clicked: true } : { ...card }
@@ -36,9 +43,12 @@ function App() {
 
   // On mount shuffle card order
   useEffect(() => {
+    if (currentScore !== 0) return;
     const shuffeledCards = shuffleArray(cards);
     setCards(shuffeledCards);
-  }, []);
+    const order = shuffeledCards.map((card) => card.id);
+    setCardOrder(order);
+  }, [currentScore]);
 
   return (
     <div className="flex flex-col place-items-center">
